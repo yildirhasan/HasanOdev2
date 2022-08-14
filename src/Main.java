@@ -11,7 +11,7 @@ public class Main {
             if (secilenIslem == 1) {
                 System.out.println("Emlak ilani islemleri baslandi  ");
                 System.out.println("lutfen sirasiyla ilan bilgileriniz giriniz 1. ilan adi ," +
-                        "2. ilan   tanimi ,  3 Site ici bilgisi , 4 ilan ilcesi 5 ilan ili , 6 ilan oda sayisi 7 ilan alani 8 ilan kat saysi  , ");
+                        "2. ilan   tanimi ,  3 Site ici bilgisi , 4 ilan ilcesi , 5 ilan ili , 6 ilan oda sayisi 7 ilan alani 8 ilan kat saysi  , ");
                 Scanner input2 = new Scanner(System.in);
                 System.out.println(" Emlak ilan adi ");
                 String ilanname = input2.nextLine();
@@ -22,7 +22,6 @@ public class Main {
                 System.out.println(" ilanin bulundugu ilce bilgisi  ");
                 String ilanIlce = input2.nextLine();
                 System.out.println(" ilanin bulundugu sehir bilgisi");
-
                 String ilansehir = input2.nextLine();
                 System.out.println(" ilandaki Oda sayisi");
                 int ilanOdasayisi = input2.nextInt();
@@ -51,7 +50,6 @@ public class Main {
                 System.out.println(" ilan kat bilgisi " + emlakilan.getKatbilgisi() + " 'dir. ");
                 System.out.println(" ilan site icirisinde mi :  " + emlakilan.getSiteBilgisi() +" dir");
                 System.out.println(" Bu ilan " + emlakilan.getSehir().toUpperCase() + " ilinin " + emlakilan.getIlce().toUpperCase() + " ilcesinde bulunmaktadir ..");
-                break;
 
             } else if (secilenIslem == 2) {
                 System.out.println(" Vasita ilani islemleri basladi  ");
@@ -76,9 +74,6 @@ public class Main {
                 System.out.println(" ilan bulundugu ilce ");
                 String ilanIlce = input2.nextLine();
 
-
-                System.out.println("ilk ilan tanimi === " + ilanVasita.getIlandescription());
-
                 ilanVasita.setIlanname(ilanname);
                 ilanVasita.setIlandescription(ilandescription);
                 ilanVasita.setRenk(renkBilgisi);
@@ -88,7 +83,6 @@ public class Main {
                 ilanVasita.setSehir(ilansehir);
                 ilanVasita.setIlce(ilanIlce);
 
-
                 System.out.println("-----------  Girmis Oldugunuz Vasita ilan bilgileri asagidaki gibidir ------------   ");
                 System.out.println(" ilan adi :  " + ilanVasita.getIlanname().toUpperCase());
                 System.out.println(" ilan aciklamasi  : " + ilanVasita.getIlandescription() + "  ...  ");
@@ -97,19 +91,15 @@ public class Main {
                 System.out.println(" ilan sahibinden mi bilgisi : " + ilanVasita.getSahibindenMi());
                 System.out.println(" ilan vites tipi bilgisi : " + ilanVasita.getVitestipi());
                 System.out.println(" ilan " + ilanVasita.getSehir().toUpperCase() + " sehrinde " + ilanVasita.getIlce().toUpperCase()+ " ilcesinde bulunmaktadir ");
-                break;
-
             }
             else if(secilenIslem==3) {
                 System.out.println(" Gorusmek uzere ...");
                 System.exit(0);
             }
             else {
-
                 System.out.println(" Yanlis girdi lutfen tekrar istediginiz secegini  giriniz  Emlak icin 1 , Vasita icin 2, Cikmak icin 3 yaziniz  ");
                 Scanner input4 = new Scanner(System.in);
                 secilenIslem = input4.nextInt();
-
             }
         }
         while(!(secilenIslem==1 && secilenIslem==2 && secilenIslem==3));
